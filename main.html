@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Indy - Dan Rahasia</title>
+</head>
+<body>
+  <div class="login-popup" id="loginPopup">
+    <div class="login-container">
+      <label for="username">Nama Pengguna:</label>
+      <input type="text" id="username">
+      <label for="password">Kata Sandi:</label>
+      <input type="password" id="password">
+      <button onclick="validateLogin()">Masuk</button>
+    </div>
+  </div>
+
+  <div class="container" id="appContainer">
+    <h1>Indy dan Whoami</h1>
+    <label for="inputText">Masukan Pesan:</label>
+    <textarea id="inputText" rows="4"></textarea>
+    <button onclick="encrypt()">Enkripsi</button>
+    <label for="outputText">Pesan Tersandi:</label>
+    <textarea id="outputText" rows="4" readonly></textarea>
+    <button onclick="decrypt()">Ubah ke teks normal</button>
+    <label for="decryptedText">Teks Normal:</label>
+    <textarea id="decryptedText" rows="4" readonly></textarea>
+    <footer>
+      <blockquote>
+        "Biarlah menjadi rahasia kita berdua"
+      </blockquote>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
