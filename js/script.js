@@ -11,11 +11,11 @@ const substitutionTable = {
   'i': 'X',
   'j': '0',
   'k': '!',
-  'l': 'y',
-  'm': 'D',
+  'l': '@',
+  'm': '#',
   'n': '$',
-  'o': 'A',
-  'p': 'h',
+  'o': '%',
+  'p': '^',
   'q': '&',
   'r': '*',
   's': '2',
@@ -24,9 +24,9 @@ const substitutionTable = {
   'v': 'Q',
   'w': '+',
   'x': '=',
-  'y': 'Z',
-  'z': 'k',
-  ' ': 'c'
+  'y': '[',
+  'z': ']',
+  ' ': '|'
 };
 
 function validateLogin() {
@@ -44,6 +44,44 @@ function validateLogin() {
     // Menampilkan alert jika nama pengguna atau kata sandi salah
     alert('Nama pengguna atau kata sandi salah. Hayoo siapa kamu ');
   }
+}
+
+function shufflePassword() {
+  const passwordInput = document.getElementById('password');
+  
+  if (passwordInput) {
+    const password = passwordInput.value;
+    const shuffledPassword = shuffleString(password);
+    passwordInput.value = shuffledPassword;
+  }
+}
+
+function decryptInputText() {
+  const inputText = document.getElementById('inputText').value;
+  const decryptedText = substituteDecrypt(inputText);
+  document.getElementById('decryptedText').value = decryptedText;
+}
+
+
+
+function decryptOnType() {
+  const encryptedInput = document.getElementById('encryptedInput');
+  const decryptedOutput = document.getElementById('decryptedOutput');
+
+  if (encryptedInput && decryptedOutput) {
+    const encryptedText = encryptedInput.value;
+    const decryptedText = substituteDecrypt(encryptedText);
+    decryptedOutput.value = decryptedText;
+  }
+}
+
+function shuffleString(str) {
+  const arr = str.split('');
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr.join('');
 }
 
 function substituteEncrypt(text) {
@@ -69,5 +107,5 @@ function decrypt() {
   const encryptedText = document.getElementById('outputText').value;
   const decryptedText = substituteDecrypt(encryptedText);
   document.getElementById('decryptedText').value = decryptedText;
-  }
-  
+    }
+    
