@@ -3,37 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kepo ya...">
   <link rel="stylesheet" href="css/style.css">
-  <title>Indy - Dan Rahasia</title>
+  <title>Kepoo ya</title>
+  <script src="js/script.js"></script>
 </head>
 <body>
-  <div class="login-popup" id="loginPopup">
-    <div class="login-container">
-      <label for="username">Nama Pengguna:</label>
-      <input type="text" id="username">
-      <label for="password">Kata Sandi:</label>
-      <input type="password" id="password">
-      <button onclick="validateLogin()">Masuk</button>
-    </div>
-  </div>
-
   <div class="container" id="appContainer">
-    <h1>Indy dan Whoami</h1>
+    <h1>Windy</h1>
+
     <label for="inputText">Masukan Pesan:</label>
     <textarea id="inputText" rows="4"></textarea>
     <button onclick="encrypt()">Enkripsi</button>
+
     <label for="outputText">Pesan Tersandi:</label>
     <textarea id="outputText" rows="4" readonly></textarea>
-    <button onclick="decrypt()">Ubah ke teks normal</button>
-    <label for="decryptedText">Teks Normal:</label>
+
+
+<button onclick="decryptInputText()">Ubah ke teks normal</button>
+
+    <label for="decryptedText">Hasil Sandi ke Teks Normal:</label>
     <textarea id="decryptedText" rows="4" readonly></textarea>
     <footer>
       <blockquote>
-        "Biarlah menjadi rahasia kita berdua"
+        "Biarlah Menjadi Rahasia Kita Berdua"
+        <cite>Whoami</cite>
       </blockquote>
+      
     </footer>
   </div>
-
-  <script src="js/script.js"></script>
 </body>
-</html>
+      </html>
+      
